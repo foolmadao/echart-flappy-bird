@@ -17,13 +17,14 @@
       }
       .btn {
         margin: 0 auto;
-        width: 120px;
+        width: 80px;
         font-weight: bold;
         color: #526ecc;
       }
     </style>  
     <div id="main"></div>
     <div class="btn" onclick="startGame()">开始游戏</div>
+    <p style="text-align: center">（点击空格向上飞行）</p>
     <script type="text/javascript">
       // 基于准备好的dom，初始化echarts实例
       const myChart = echarts.init(document.getElementById('main'));
@@ -73,8 +74,8 @@
           return true;
         }
         let coordList = [
-          [centerCoord[0] + 15, centerCoord[1] + 1],
-          [centerCoord[0] + 15, centerCoord[1] - 1],
+          [centerCoord[0] + 15, centerCoord[1] + 2],
+          [centerCoord[0] + 15, centerCoord[1] - 2],
         ]
 
         for (let i = 0; i < 2; i++) {
